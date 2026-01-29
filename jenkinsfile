@@ -9,26 +9,26 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'echo "Building stage"'
+                sh 'echo "Building stage"'
             }
         }
         stage('Testing') {
             steps {
-                bat 'echo "Testing stage"'
+                sh 'echo "Testing stage"'
             }
         }
         stage('Deploy') {
             steps {
-                bat 'echo "Deploying stage"'
+                sh 'echo "Deploying stage"'
             }
         }
     }
     post{
         success{
-            bat 'echo "Build Success"'
+            sh 'echo "Build Success"'
         }
         failure{
-            bat 'echo "Build Failure"'
+            sh 'echo "Build Failure"'
         }
     }
 }
