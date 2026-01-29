@@ -2,33 +2,33 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout'){
+        stage('Checkout Code'){
             steps{
                 git branch: 'main' ,url:'https://github.com/ShaikSalam24/SpringApp'
             }
         }
         stage('Build') {
             steps {
-                bat 'echo Building stage'
+                bat 'echo "Building stage"'
             }
         }
         stage('Testing') {
             steps {
-                bat 'echo Testing stage'
+                bat 'echo "Testing stage"'
             }
         }
         stage('Deploy') {
             steps {
-                bat 'echo Deploying stage'
+                bat 'echo "Deploying stage"'
             }
         }
     }
     post{
         success{
-            bat 'echo Build Success'
+            bat 'echo "Build Success"'
         }
         failure{
-            bat 'echo Build Failure'
+            bat 'echo "Build Failure"'
         }
     }
 }
