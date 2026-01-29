@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Check Out'){
+        stage('CheckOut'){
             steps{
                 git branch: 'main' ,url:'https://github.com/ShaikSalam24/SpringApp'
             }
